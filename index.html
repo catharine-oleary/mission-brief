@@ -1580,8 +1580,9 @@ body {
       <div style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.18em; font-weight:600; color:rgba(255,255,255,0.45); text-transform:uppercase; margin-bottom:28px;">Client Intelligence Agency · Private Brief</div>
 
       <!-- Headline -->
-      <div style="font-family:'Playfair Display',Georgia,serif; font-size:clamp(1.6rem,4vw,2.4rem); font-weight:900; color:#ffffff; line-height:1.2; margin-bottom:8px;">The intelligence shows a clear revenue opportunity.</div>
-      <div style="font-family:'Inter',sans-serif; font-size:0.95rem; color:rgba(255,255,255,0.65); margin-bottom:36px;">This brief was built specifically for the College of Body Science.</div>
+      <div style="font-family:'Playfair Display',Georgia,serif; font-size:clamp(1.5rem,4vw,2.2rem); font-weight:900; color:#ffffff; line-height:1.2; margin-bottom:12px;">26 years of proof. An invisible epidemic no one has claimed. A window that closes in 60 days.</div>
+      <div style="font-family:'Inter',sans-serif; font-size:0.9rem; color:rgba(255,255,255,0.6); margin-bottom:8px; letter-spacing:0.04em; text-transform:uppercase; font-weight:600;">Built specifically for Caroline Barrow · College of Body Science</div>
+      <div style="font-family:'Inter',sans-serif; font-size:0.92rem; color:rgba(255,255,255,0.65); margin-bottom:36px; line-height:1.6;">The intelligence inside this brief shows exactly what the College of Body Science is positioned to own — and what it costs to wait.</div>
 
       <!-- Revenue numbers — the spectacular part -->
       <div class="pw-revenue-row" style="display:flex; gap:16px; margin-bottom:36px; text-align:center;">
@@ -1617,7 +1618,7 @@ body {
         <div style="font-family:'Playfair Display',Georgia,serif; font-size:1.25rem; font-weight:700; color:#ffffff; margin-bottom:10px; line-height:1.3;">There is no other organisation in the UK with this credential stack. The brief shows you what it is worth.</div>
         <div style="font-family:'Inter',sans-serif; font-size:0.88rem; color:rgba(255,255,255,0.65); margin-bottom:20px; line-height:1.6;">One hour with Catharine to walk through the intelligence and map exactly what moves first — and what can wait.</div>
         <div style="font-family:'Playfair Display',Georgia,serif; font-size:2rem; font-weight:900; color:#ffffff; margin-bottom:20px;">$497 <span style="font-size:1rem; font-weight:400; color:rgba(255,255,255,0.5); font-family:'Inter',sans-serif;">USD</span></div>
-        <a id="paywall-cta-btn" href="https://tools.instaloops.com/payment-link/6a15e66ec3ea3a19f0bd88ec" style="display:block; background:#0047AB; color:#ffffff; font-family:'Inter',sans-serif; font-size:0.95rem; font-weight:600; text-decoration:none; padding:16px 32px; border-radius:8px; letter-spacing:0.02em;">Access the Full Brief →</a>
+        <a id="paywall-cta-btn" href="https://tools.instaloops.com/payment-link/6a15e66ec3ea3a19f0bd88ec" style="display:block; background:#ff9900; color:#ffffff; font-family:'Inter',sans-serif; font-size:0.95rem; font-weight:700; text-decoration:none; padding:16px 32px; border-radius:8px; letter-spacing:0.02em;">Access the Full Brief →</a>
       </div>
 
       <div style="font-family:'Inter',sans-serif; font-size:0.75rem; color:rgba(255,255,255,0.35); line-height:1.6;">
@@ -1697,22 +1698,4 @@ body {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const id = entry.target.id;
-        navItems.forEach(item => {
-          item.classList.remove('active');
-          if (item.getAttribute('href') === '#' + id) {
-            item.classList.add('active');
-          }
-        });
-      }
-    });
-  }, {
-    rootMargin: '-10% 0px -80% 0px',
-    threshold: 0
-  });
-
-  anchors.forEach(anchor => observer.observe(anchor));
-</script>
-
-</body>
-</html>
+        const id = e
