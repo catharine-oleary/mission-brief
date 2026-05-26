@@ -1708,4 +1708,22 @@ body {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const id = e
+        const id = entry.target.id;
+        navItems.forEach(item => {
+          item.classList.remove('active');
+          if (item.getAttribute('href') === '#' + id) {
+            item.classList.add('active');
+          }
+        });
+      }
+    });
+  }, {
+    rootMargin: '-10% 0px -80% 0px',
+    threshold: 0
+  });
+
+  anchors.forEach(anchor => observer.observe(anchor));
+</script>
+
+</body>
+</html>
