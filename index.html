@@ -993,6 +993,12 @@ body {
 </style>
 </head>
 <body>
+<!-- BOOKING BANNER — only visible on unlocked version -->
+<div id="booking-banner" style="display:none; position:sticky; top:0; z-index:8000; background:#ff9900; padding:12px 24px; text-align:center; box-shadow:0 2px 12px rgba(0,0,0,0.3);">
+  <span style="font-family:'Inter',sans-serif; font-size:0.88rem; font-weight:600; color:#ffffff; margin-right:16px;">You have the full brief. Ready to map your first move?</span>
+  <a id="booking-banner-link" href="BOOKING_LINK_PLACEHOLDER" style="font-family:'Inter',sans-serif; font-size:0.85rem; font-weight:700; color:#ffffff; background:rgba(0,0,0,0.2); padding:6px 16px; border-radius:5px; text-decoration:none; white-space:nowrap;">Book Your Mission Debrief →</a>
+</div>
+
 
 <!-- MOBILE TOP BAR (hidden on desktop) -->
 <div class="mobile-topbar">
@@ -1645,6 +1651,12 @@ body {
 
   // Check if the visitor has the unlock key in the URL
   const isUnlocked = new URLSearchParams(window.location.search).get('unlocked') === 'true';
+
+  // Show booking banner on unlocked version
+  if (isUnlocked) {
+    const banner = document.getElementById('booking-banner');
+    if (banner) banner.style.display = 'block';
+  }
 
   if (!isUnlocked) {
     const overlay = document.getElementById('paywall-overlay');
